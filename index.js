@@ -9,13 +9,22 @@ app.get("/:nome/:lang", (req, res) => {
     let lang = req.params.lang;
     let empresa = "Javascript";
     let exibirMsg = false;
+
+    let produtos = [
+        { nome: "Doritos", preco: 3.14 },
+        { nome: "Fandangos", preco: 1.99},
+        { nome: "Abacaxi", preco: 5.04 },
+        { nome: "RedBull", preco: 6.05}
+    ];
+
     //res.send("Bem vindo ao meu site!");
     res.render("index", {
         nome: nome,
         lang: lang,
         empresa: empresa,
         inscritos: 1,
-        msg: exibirMsg
+        msg: exibirMsg,
+        produtos: produtos
     });
 });
 
