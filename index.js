@@ -8,12 +8,14 @@ app.get("/:nome/:lang", (req, res) => {
     let nome = req.params.nome;
     let lang = req.params.lang;
     let empresa = "Javascript";
+    let exibirMsg = false;
     //res.send("Bem vindo ao meu site!");
     res.render("index", {
         nome: nome,
         lang: lang,
         empresa: empresa,
-        inscritos: 1
+        inscritos: 1,
+        msg: exibirMsg
     });
 });
 
